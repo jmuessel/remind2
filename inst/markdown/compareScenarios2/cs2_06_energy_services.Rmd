@@ -119,8 +119,12 @@ showAreaAndBarPlots(data, items, scales = "fixed")
 tot <- "Est LDV Stock"
 items <- c(
   "Est EV LDV Stock",
+  "Stock|Transport|LDV|BEV",
   "Est H2 LDV Stock",
-  "Est ICE LDV Stock")
+  "Stock|Transport|LDV|FCEV",
+  "Est ICE LDV Stock",
+  "Stock|Transport|LDV|Liquids"
+  )
 showAreaAndBarPlots(data, items, tot, scales = "fixed")
 ```
 
@@ -128,9 +132,12 @@ showAreaAndBarPlots(data, items, tot, scales = "fixed")
 ```{r LDV Vehicles Sales}
 tot <- "Est LDV Sales"
 items <- c(
-  "Est EV LDV Sales",
+ "Est EV LDV Sales",
+  "Sales|Transport|LDV|BEV",
   "Est H2 LDV Sales",
-  "Est ICE LDV Sales")
+  "Sales|Transport|LDV|FCEV",
+  "Est ICE LDV Sales",
+  "Sales|Transport|LDV|Liquids")
 showAreaAndBarPlots(data, items, tot, scales = "fixed")
 ```
 

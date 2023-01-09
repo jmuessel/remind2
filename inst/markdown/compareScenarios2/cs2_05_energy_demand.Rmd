@@ -367,8 +367,45 @@ items <- c(
   "FE|Transport|non-LDV|Liquids",
   "FE|Transport|non-LDV|Gases",
   "FE|Transport|non-LDV|Electricity",
-  "FE|Transport|non-LDV|Hydrogen")
+  "FE|Transport|non-LDV|Hydrogen"
+  )
 showAreaAndBarPlots(data, items, tot, scales = "fixed")
+```
+
+### Passenger LDV Four Wheelers
+
+```{r}
+tot <- "FE|Transport|Pass|Road|LDV"
+items <- c(
+  "FE|Transport|Pass|Road|LDV|Electricity",
+  "FE|Transport|Pass|Road|LDV|Hydrogen",
+  "FE|Transport|Pass|Road|LDV|Gases",
+  "FE|Transport|Pass|Road|LDV|Liquids|Biomass",
+  "FE|Transport|Pass|Road|LDV|Liquids|Fossil",
+  "FE|Transport|Pass|Road|LDV|Liquids|Hydrogen"
+  )
+showAreaAndBarPlots(data, items, tot, orderVars = "user")
+showAreaAndBarPlots(data, items, tot, fill = TRUE, orderVars = "user")
+showLinePlots(data, tot)
+walk(items, showLinePlots, data = data)
+```
+
+### Freight Trucks
+
+```{r}
+tot <- "FE|Transport|Freight|Road"
+items <- c(
+  "FE|Transport|Freight|Road|Electricity",
+  "FE|Transport|Freight|Road|Hydrogen",
+  "FE|Transport|Freight|Road|Gases",
+  "FE|Transport|Freight|Road|Liquids|Biomass",
+  "FE|Transport|Freight|Road|Liquids|Fossil",
+  "FE|Transport|Freight|Road|Liquids|Hydrogen"
+  )
+showAreaAndBarPlots(data, items, tot, orderVars = "user")
+showAreaAndBarPlots(data, items, tot, fill = TRUE, orderVars = "user")
+showLinePlots(data, tot)
+walk(items, showLinePlots, data = data)
 ```
 
 ### Bunkers
